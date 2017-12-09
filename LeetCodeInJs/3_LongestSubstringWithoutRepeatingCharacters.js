@@ -9,7 +9,7 @@ var lengthOfLongestSubstring = function(s) {
     var isRepeat = false;
     var len = s.length;
     var i = 0;
-    for(;i<len;i++){
+    for(;i<len-1;i++){
         isRepeat = false;
         var substring = s.slice(startpos,startpos+curlen);
         for(var j=0;j<curlen;j++){
