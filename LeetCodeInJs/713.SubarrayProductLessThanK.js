@@ -1,4 +1,12 @@
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
 var numSubarrayProductLessThanK = function(nums, k) {
+    if(k<=1){
+        return 0;
+    }
     var prod  = 1;
     var result = 0;
     var len = nums.length;
@@ -10,7 +18,6 @@ var numSubarrayProductLessThanK = function(nums, k) {
     }
     return result;
 };
-
 // var numSubarrayProductLessThanK = function(nums, k) {
 //     var prod  = 1;
 //     var result = 0;

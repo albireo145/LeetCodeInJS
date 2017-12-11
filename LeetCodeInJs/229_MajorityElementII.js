@@ -24,13 +24,13 @@ var majorityElement = function(nums) {
             c2--;
         }
     }
-    var counter1 = 0;
-    var counter2 = 0;
+    c1 = 0;
+    c2 = 0;
     for(num of nums){
-        if(num==n1) counter1++
-        if(num==n2) counter2++
+        if(num==n1) c1++
+        if(num==n2) c2++
     }
-    if(counter1 > nums.length/3) res.push(n1);
-    if(counter2 > nums.length/3) res.push(n2);
+    if(c1 > nums.length/3) res.push(n1);
+    if(n1!=n2 && (c2 > nums.length/3)) res.push(n2);
     return res
 };

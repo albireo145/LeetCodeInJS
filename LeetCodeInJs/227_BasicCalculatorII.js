@@ -3,8 +3,9 @@
  * @return {number}
  */
 var calculate = function(s) {
-    var optArr = s.replace(/\d/ig,'').split('');
-    var numArr = s.replace(/[\+\*\-\/]/ig,' ').split(' ');
+    var str = s.replace(/\s/ig,'');
+    var optArr = str.replace(/\d/ig,'').split('');
+    var numArr = str.replace(/[\+\*\-\/]/ig,' ').split(' ');
     var res = [];
     res.push(numArr[0]);
     for(var i = 0;i<optArr.length;i++){
@@ -16,10 +17,11 @@ var calculate = function(s) {
                 res.push(-numArr[i+1]);
                 break;
             case '*':
-                res.push(res.pop() * numArr[i+1]);
+                res.push(res.pop() * numArr[i+1] >> 0);
                 break;
             case '\/':
-                res.push(res.pop() / numArr[i+1]);
+                
+                res.push(res.pop() / numArr[i+1] >> 0);
                 break;
             default:
                 break;

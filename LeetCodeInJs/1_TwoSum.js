@@ -6,11 +6,10 @@
 var twoSum = function(nums, target) {
     var len = nums.length;
     var i = 0;
-    var j = 0;
-    for(;i<len;i++){
-        for(;j<i;j++){
+    for(;i<len-1;i++){
+        for(var j = i+1;j<len;j++){
             if((nums[j]+nums[i])==target){
-                return [j,i];
+                return [i,j];
             }
         }
     }

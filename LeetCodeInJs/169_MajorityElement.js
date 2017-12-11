@@ -1,7 +1,3 @@
-/**
- * @param {number[]} nums
- * @return {number}
- */
 var majorityElement = function(nums) {
     var major = 0;
     var count = 0;
@@ -9,7 +5,7 @@ var majorityElement = function(nums) {
         if(count == 0){
             major = num;
             count++;
-        }else if(count==num){
+        }else if(major == num){
                 count++;
         }else{
             count--;
