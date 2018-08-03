@@ -9,28 +9,7 @@
  * @param {TreeNode} t
  * @return {string}
  */
-//  TODO 
-// var tree2str = function(t) {
-//   var arr = [t.val]
-//   var stk = [t]
-//   var str = ''
-//   while(stk.length > 0) {
-//     var curNode = stk[stk.length - 1]
-//     while(curNode.left) {
-//       str += '(' + curNode.left.val
-//       stk.push(curNode.left)
-//       curNode = curNode.left
-//     }
-//     if(curNode.right) {
-//       stk.push(curNode.right)
-//       str += '()'
-//       str += '(' + curNode.right.val
-//     } else {
-//       str += ')'
-//       stk.pop()
-//     }
-//   }
-// };
+recursion
 var tree2str = function(t) {
   if (!t) return ''
   var str = t.val
